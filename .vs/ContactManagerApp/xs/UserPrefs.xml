@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{7C5B3756-A35C-4C22-BCD0-2B99B6F509C5}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ContactManagerApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ContactManagerApp/appsettings.json">
+    <Files>
+      <File FileName="ContactManagerApp/Pages/Index.cshtml" />
+      <File FileName="ContactManagerApp/Pages/Index.cshtml.cs" Line="35" Column="6" />
+      <File FileName="EFDataAccessLibrary/Repositories/ContactRepository.cs" />
+      <File FileName="EFDataAccessLibrary/Models/Contact.cs" />
+      <File FileName="ContactManagerApp/appsettings.json" Line="14" Column="1" />
+      <File FileName="ContactManagerApp/Program.cs" Line="17" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ContactManagerApp" expanded="True">
+            <Node name="ContactManagerApp" expanded="True">
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+            <Node name="EFDataAccessLibrary" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

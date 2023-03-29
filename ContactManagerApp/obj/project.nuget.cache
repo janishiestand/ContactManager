@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gjr/SQ8dgHYd9TtaCQsKCsH1L5lJLalPL7EvLNtetwv71vnkcYmNrbyX19ptE4S0hQlnNnhT6OZ5ABwFUAqF4Q==",
+  "dgSpecHash": "4KAdoSJbDWuUaD+JMM55McBhDeuT8TLK2O2WrvUIbCyqh8BN/xxd+2GGyFS+lk6o0gm1TcOi59aNgLiljqUJwg==",
   "success": true,
-  "projectFilePath": "/Users/janishiestand/Desktop/IntelliJ Projects/Visual Studio/ContactManagerApp/ContactManagerApp/ContactManagerApp.csproj",
+  "projectFilePath": "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/ContactManagerApp/ContactManagerApp.csproj",
   "expectedPackageFiles": [
     "/Users/janishiestand/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/janishiestand/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",

@@ -11034,11 +11034,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/janishiestand/Desktop/IntelliJ Projects/Visual Studio/ContactManagerApp/ContactManagerApp/ContactManagerApp.csproj",
+      "projectUniqueName": "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/ContactManagerApp/ContactManagerApp.csproj",
       "projectName": "ContactManagerApp",
-      "projectPath": "/Users/janishiestand/Desktop/IntelliJ Projects/Visual Studio/ContactManagerApp/ContactManagerApp/ContactManagerApp.csproj",
+      "projectPath": "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/ContactManagerApp/ContactManagerApp.csproj",
       "packagesPath": "/Users/janishiestand/.nuget/packages/",
-      "outputPath": "/Users/janishiestand/Desktop/IntelliJ Projects/Visual Studio/ContactManagerApp/ContactManagerApp/obj/",
+      "outputPath": "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/ContactManagerApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/janishiestand/.nuget/NuGet/NuGet.Config"
@@ -11053,8 +11053,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/janishiestand/Desktop/IntelliJ Projects/Visual Studio/ContactManagerApp/EFDataAccessLibrary/EFDataAccessLibrary.csproj": {
-              "projectPath": "/Users/janishiestand/Desktop/IntelliJ Projects/Visual Studio/ContactManagerApp/EFDataAccessLibrary/EFDataAccessLibrary.csproj"
+            "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/EFDataAccessLibrary/EFDataAccessLibrary.csproj": {
+              "projectPath": "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/EFDataAccessLibrary/EFDataAccessLibrary.csproj"
             }
           }
         }
@@ -11117,7 +11117,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
       }
     }
   }

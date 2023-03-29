@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/janishiestand/Desktop/IntelliJ Projects/Visual Studio/ContactManagerApp/EFDataAccessLibrary/EFDataAccessLibrary.csproj": {}
+    "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/EFDataAccessLibrary/EFDataAccessLibrary.csproj": {}
   },
   "projects": {
-    "/Users/janishiestand/Desktop/IntelliJ Projects/Visual Studio/ContactManagerApp/EFDataAccessLibrary/EFDataAccessLibrary.csproj": {
+    "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/EFDataAccessLibrary/EFDataAccessLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/janishiestand/Desktop/IntelliJ Projects/Visual Studio/ContactManagerApp/EFDataAccessLibrary/EFDataAccessLibrary.csproj",
+        "projectUniqueName": "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/EFDataAccessLibrary/EFDataAccessLibrary.csproj",
         "projectName": "EFDataAccessLibrary",
-        "projectPath": "/Users/janishiestand/Desktop/IntelliJ Projects/Visual Studio/ContactManagerApp/EFDataAccessLibrary/EFDataAccessLibrary.csproj",
+        "projectPath": "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/EFDataAccessLibrary/EFDataAccessLibrary.csproj",
         "packagesPath": "/Users/janishiestand/.nuget/packages/",
-        "outputPath": "/Users/janishiestand/Desktop/IntelliJ Projects/Visual Studio/ContactManagerApp/EFDataAccessLibrary/obj/",
+        "outputPath": "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/EFDataAccessLibrary/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/janishiestand/.nuget/NuGet/NuGet.Config"
@@ -69,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }

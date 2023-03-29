@@ -30,7 +30,13 @@ public class IndexModel : PageModel
 
     [BindProperty, Required]
     public string? Birthday { get; set; }
+    /*
+    [BindProperty, Required, DisplayName()]
+    public List<Email> EmailAddresses { get; set; } = new List<Email>();
 
+    [BindProperty, Required, DisplayName()]
+    public List<Address> Addresses { get; set; } = new List<Address>();
+    */
     public IndexModel(ILogger<IndexModel> logger, IContactRepository db)
     {
         _logger = logger;
@@ -48,7 +54,6 @@ public class IndexModel : PageModel
         {
             RedirectToPage("localhost:7296");
         }
-
     }
     
     private async Task LoadSampleData(CancellationToken cancellationToken)
@@ -61,24 +66,20 @@ public class IndexModel : PageModel
             await _db.SaveChangesAsync(cancellationToken);
             return;
         }
-
             Contacts = await _db.ToListAsync(cancellationToken);
-
     }
-
-    /*
-    [BindProperty, Required, DisplayName("Person's Email")]
-    public string? Email { get; set; }
-
-    [BindProperty, Required, DisplayName("Person's Address")]
-    public string? Address { get; set; } */
 
     public async Task<IActionResult> OnPost(CancellationToken cancellationToken)
     {
         if (ModelState.IsValid)
         {
-            Contact contact = new() { FirstName = FirstName!, LastName = LastName!,
-                PhoneNumber = PhoneNumber!, Birthday = Birthday! };
+            Contact contact = new() {
+                FirstName = FirstName!,
+                LastName = LastName!,
+                PhoneNumber = PhoneNumber!,
+                Birthday = Birthday!
+            };
+
             _db.Add(contact);
             await _db.SaveChangesAsync(cancellationToken);
             return RedirectToPage();

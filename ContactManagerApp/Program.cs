@@ -19,7 +19,6 @@ public class Program
         builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         builder.Services.AddTransient<IContactRepository, ContactRepository>();
         
-
         builder.Services.AddRazorPages();
 
         var app = builder.Build();

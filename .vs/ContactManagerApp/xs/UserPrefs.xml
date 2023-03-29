@@ -1,19 +1,38 @@
 ﻿<Properties StartupConfiguration="{7C5B3756-A35C-4C22-BCD0-2B99B6F509C5}|https">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.ContactManagerApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="ContactManagerApp/appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EFDataAccessLibrary/Interfaces/IContactRepository.cs">
     <Files>
-      <File FileName="ContactManagerApp/Pages/Index.cshtml" />
-      <File FileName="ContactManagerApp/Pages/Index.cshtml.cs" />
-      <File FileName="EFDataAccessLibrary/Repositories/ContactRepository.cs" />
-      <File FileName="EFDataAccessLibrary/Models/Contact.cs" />
-      <File FileName="ContactManagerApp/appsettings.json" Line="14" Column="1" />
-      <File FileName="ContactManagerApp/Program.cs" />
+      <File FileName="ContactManagerApp/Pages/Index.cshtml.cs" Line="42" Column="39" />
+      <File FileName="ContactManagerApp/Pages/Update.cshtml.cs" Line="33" Column="14" />
+      <File FileName="EFDataAccessLibrary/Repositories/ContactRepository.cs" Line="37" Column="98" />
+      <File FileName="EFDataAccessLibrary/Interfaces/IContactRepository.cs" Line="11" Column="80" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ContactManagerApp" expanded="True">
+            <Node name="ContactManagerApp" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Index.cshtml" expanded="True" />
+                <Node name="Update.cshtml" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="EFDataAccessLibrary" expanded="True">
+              <Node name="Interfaces" expanded="True">
+                <Node name="IContactRepository.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
 </Properties>

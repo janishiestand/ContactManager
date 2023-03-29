@@ -8,14 +8,16 @@ namespace EFDataAccessLibrary.Interfaces
 	public interface IContactRepository : IGenericRepository<Contact>
 	{
 		List<Contact> GetAllContacts();
-		void SaveChanges();
-		Task SaveChangesAsync();
+		Task<List<Contact>> GetAllContactsAsync(CancellationToken cancellationToken);
+        void SaveChanges();
+		Task SaveChangesAsync(CancellationToken cancellationToken);
         int Count();
-		Task<List<Contact>> ToListAsync();
+		Task<List<Contact>> ToListAsync(CancellationToken cancellationToken);
 		Contact? Find(int id);
 		void AddRange(IEnumerable<Contact> contacts);
-		Task<Contact> FindAsync(int id);
-
+		Task AddRangeAsync(IEnumerable<Contact> contacts, CancellationToken cancellationToken);
+		Task<Contact> FindAsync(int id, CancellationToken cancellationToken);
+		Task<int> CountAsync(CancellationToken cancellationToken);
     }
 }
 

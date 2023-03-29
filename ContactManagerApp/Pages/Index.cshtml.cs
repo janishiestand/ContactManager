@@ -19,33 +19,6 @@ public class IndexModel : PageModel
 
     public IList<Contact> Contacts = new List<Contact>();
 
-    public IndexModel(ILogger<IndexModel> logger, IContactRepository db)
-    {
-        _logger = logger;
-        _db = db;
-    }
-
-    public async Task OnGetAsync()
-    {
-        await LoadSampleData();
-        var contacts = _db.GetAllContacts();
-    }
-    
-    private async Task LoadSampleData()
-    {
-        if (_db.Count() == 0)
-        {
-            string file = System.IO.File.ReadAllText("sampledata.json");
-            var contacts = JsonSerializer.Deserialize<List<Contact>>(file);
-            _db.AddRange(contacts);
-            _db.SaveChanges();
-        }
-        else
-        {
-            Contacts = await _db.ToListAsync();
-        }
-    }
-
     [BindProperty, Required]
     public string? FirstName { get; set; }
 
@@ -58,26 +31,62 @@ public class IndexModel : PageModel
     [BindProperty, Required]
     public string? Birthday { get; set; }
 
-    /* [BindProperty, Required, DisplayName("Person's Email")]
+    public IndexModel(ILogger<IndexModel> logger, IContactRepository db)
+    {
+        _logger = logger;
+        _db = db;
+    }
+
+    public async Task OnGetAsync(CancellationToken cancellationToken)
+    {
+        try
+        {
+            await LoadSampleData(cancellationToken);
+            var contacts = _db.GetAllContacts();
+        }
+        catch (Exception e)
+        {
+            RedirectToPage("localhost:7296");
+        }
+
+    }
+    
+    private async Task LoadSampleData(CancellationToken cancellationToken)
+    {
+        if (await _db.CountAsync(cancellationToken) == 0)
+        {
+            string file = System.IO.File.ReadAllText("sampledata.json");
+            var contacts = JsonSerializer.Deserialize<List<Contact>>(file);
+            await _db.AddRangeAsync(contacts, cancellationToken);
+            await _db.SaveChangesAsync(cancellationToken);
+            return;
+        }
+
+            Contacts = await _db.ToListAsync(cancellationToken);
+
+    }
+
+    /*
+    [BindProperty, Required, DisplayName("Person's Email")]
     public string? Email { get; set; }
 
     [BindProperty, Required, DisplayName("Person's Address")]
     public string? Address { get; set; } */
 
-    public async Task<IActionResult> OnPost()
+    public async Task<IActionResult> OnPost(CancellationToken cancellationToken)
     {
         if (ModelState.IsValid)
         {
             Contact contact = new() { FirstName = FirstName!, LastName = LastName!,
                 PhoneNumber = PhoneNumber!, Birthday = Birthday! };
             _db.Add(contact);
-            await _db.SaveChangesAsync();
+            await _db.SaveChangesAsync(cancellationToken);
             return RedirectToPage();
         }
         return Page();
     }
 
-    public IActionResult OnPostDelete(int id)
+    public IActionResult OnPostDelete(int id, CancellationToken cancellationToken)
     {
         Contact? toRemove = _db.Find(id);
         if (toRemove == null)
@@ -85,7 +94,7 @@ public class IndexModel : PageModel
             return (NotFound());
         }
         _db.Remove(toRemove);
-        _db.SaveChangesAsync();
+        _db.SaveChangesAsync(cancellationToken);
         return RedirectToAction(nameof(IndexModel));
     }
 }

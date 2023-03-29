@@ -23,22 +23,9 @@ namespace ContactManagerApp.Pages
         [BindProperty]
         public Contact? Cnt { get; set; }
 
-        /*
-        public async Task<IActionResult> OnGetAsync(int id)
+        public async Task<IActionResult> OnPostAsync(int id, CancellationToken cancellationToken)
         {
-            Cnt = await _db.FindAsync(id);
-            if (Cnt == null)
-            {
-                return NotFound();
-            }
-
-            return Page();
-        }
-        */
-
-        public async Task<IActionResult> OnPostAsync(int id)
-        {
-            var cntToUpdate = await _db.FindAsync(id);
+            var cntToUpdate = await _db.FindAsync(id, cancellationToken);
 
             if (cntToUpdate == null)
             {
@@ -49,7 +36,7 @@ namespace ContactManagerApp.Pages
                 cntToUpdate, "Cnt",
                 c => c.FirstName,  c => c.LastName, c => c.PhoneNumber, c => c.Birthday))
             {
-                await _db.SaveChangesAsync();
+                await _db.SaveChangesAsync(cancellationToken);
                 return Redirect("../Index");
             }
             return Page();

@@ -16,10 +16,9 @@ public class Program
         string? connectionString = builder.Configuration.GetConnectionString("Default");
         builder.Services.AddDbContext<ContactContext>(options => options.UseMySql(connectionString, serverVersion));
 
-        #region Repositories
         builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         builder.Services.AddTransient<IContactRepository, ContactRepository>();
-        #endregion
+        
 
         builder.Services.AddRazorPages();
 

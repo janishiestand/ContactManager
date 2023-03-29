@@ -16,17 +16,11 @@ namespace EFDataAccessLibrary.Repositories
 		{
 			_db = db;
 		}
-		/*
-        public void AddRange(IEnumerable<Contact> contacts)
-        {
-            _context.Set<Contact>().AddRange(contacts);
-        }
-		*/
+
         public void AddRange(IEnumerable<Contact> contacts)
         {
 			_db.AddRange(contacts);
         }
-
 
         public List<Contact> GetAllContacts()
 		{
@@ -66,8 +60,6 @@ namespace EFDataAccessLibrary.Repositories
 			Contact cnt = await _db.Contacts.FindAsync(id);
 			return cnt;
 		}
-
-
 
     }
 }

@@ -1,28 +1,35 @@
 ﻿<Properties StartupConfiguration="{7C5B3756-A35C-4C22-BCD0-2B99B6F509C5}|https">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.ContactManagerApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ContactManagerApp/Pages/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ContactManagerApp/appsettings.json">
     <Files>
-      <File FileName="ContactManagerApp/Pages/Index.cshtml" Line="5" Column="43" />
+      <File FileName="ContactManagerApp/Pages/Index.cshtml" Line="6" Column="2" />
+      <File FileName="EFDataAccessLibrary/Interfaces/IContactRepository.cs" Line="19" Column="16" />
+      <File FileName="EFDataAccessLibrary/Repositories/ContactRepository.cs" Line="50" Column="4" />
+      <File FileName="ContactManagerApp/Pages/Index.cshtml.cs" Line="97" Column="49" />
+      <File FileName="ContactManagerApp/Pages/Update.cshtml.cs" Line="12" Column="34" />
+      <File FileName="ContactManagerApp/appsettings.json" Line="11" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ContactManagerApp" expanded="True">
             <Node name="ContactManagerApp" expanded="True">
-              <Node name="Pages" expanded="True">
-                <Node name="Index.cshtml" expanded="True" selected="True" />
-                <Node name="Update.cshtml" expanded="True" />
-              </Node>
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+            <Node name="EFDataAccessLibrary" expanded="True">
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Repositories" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

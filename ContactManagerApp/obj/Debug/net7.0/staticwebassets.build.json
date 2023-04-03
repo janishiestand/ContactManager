@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "C1l6MeiH5KAmnWm1KguZTp2PZv73taBG8IyI3VJsYNU=",
+  "Hash": "ZwJ2DPqMbCmdCeGGuUJSBSRRAU7qhPaB07VaRqy7OYQ=",
   "Source": "ContactManagerApp",
   "BasePath": "_content/ContactManagerApp",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/ContactManagerApp/obj/Debug/net7.0/scopedcss/projectbundle/ContactManagerApp.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/ContactManagerApp/wwwroot/.DS_Store",
+      "SourceId": "ContactManagerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/ContactManagerApp/wwwroot/",
+      "BasePath": "_content/ContactManagerApp",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
       "Identity": "/Users/janishiestand/Desktop/IntelliJ Projects/Git/ContactManager/ContactManagerApp/wwwroot/css/site.css",

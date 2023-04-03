@@ -16,6 +16,7 @@ public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
     private readonly IContactRepository _db;
+    CancellationTokenSource cts = new CancellationTokenSource();
 
     public IList<Contact> Contacts = new List<Contact>();
 
@@ -37,6 +38,7 @@ public class IndexModel : PageModel
     [BindProperty, Required, DisplayName()]
     public List<Address> Addresses { get; set; } = new List<Address>();
     */
+
     public IndexModel(ILogger<IndexModel> logger, IContactRepository db)
     {
         _logger = logger;
@@ -52,7 +54,7 @@ public class IndexModel : PageModel
         }
         catch (Exception e)
         {
-            RedirectToPage("localhost:7296");
+            RedirectToPage("/");
         }
     }
     
@@ -73,12 +75,11 @@ public class IndexModel : PageModel
     {
         if (ModelState.IsValid)
         {
-            Contact contact = new() {
-                FirstName = FirstName!,
-                LastName = LastName!,
-                PhoneNumber = PhoneNumber!,
-                Birthday = Birthday!
-            };
+            Contact contact = new(
+                FirstName: FirstName,
+                LastName: LastName,
+                PhoneNumber: PhoneNumber,
+                Birthday: Birthday);
 
             _db.Add(contact);
             await _db.SaveChangesAsync(cancellationToken);

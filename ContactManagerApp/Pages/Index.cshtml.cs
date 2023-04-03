@@ -14,7 +14,6 @@ namespace ContactManagerApp.Pages;
 
 public class IndexModel : PageModel
 {
-    private readonly ILogger<IndexModel> _logger;
     private readonly IContactRepository _db;
     CancellationTokenSource cts = new CancellationTokenSource();
 
@@ -39,9 +38,8 @@ public class IndexModel : PageModel
     public List<Address> Addresses { get; set; } = new List<Address>();
     */
 
-    public IndexModel(ILogger<IndexModel> logger, IContactRepository db)
+    public IndexModel(IContactRepository db)
     {
-        _logger = logger;
         _db = db;
     }
 
@@ -52,7 +50,7 @@ public class IndexModel : PageModel
             await LoadSampleData(cancellationToken);
             var contacts = _db.GetAllContacts();
         }
-        catch (Exception e)
+        catch (Exception)
         {
             RedirectToPage("/");
         }

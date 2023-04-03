@@ -17,14 +17,7 @@ namespace EFDataAccessLibrary.Repositories
         {
             _context.Set<T>().Add(entity);
         }
-        public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
-        {
-            return _context.Set<T>().Where(expression);
-        }
-        public IEnumerable<T> GetAll()
-        {
-            return _context.Set<T>().ToList();
-        }
+       
         public T GetById(int id)
         {
             return _context.Set<T>().Find(id);

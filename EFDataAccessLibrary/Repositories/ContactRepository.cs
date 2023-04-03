@@ -71,9 +71,9 @@ namespace EFDataAccessLibrary.Repositories
 			return _db.Contacts.Find(id);
 		}
 
-		public async Task<Contact> FindAsync(int id, CancellationToken cancellationToken)
+		public async Task<Contact?> FindAsync(int id, CancellationToken cancellationToken)
 		{
-			Contact cnt = await _db.Contacts.FindAsync(id, cancellationToken);
+			Contact? cnt = await _db.Contacts.FindAsync(id, cancellationToken);
 			return cnt;
 		}
 

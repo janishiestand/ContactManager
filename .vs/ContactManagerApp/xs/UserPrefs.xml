@@ -1,7 +1,6 @@
-﻿<Properties StartupConfiguration="{7C5B3756-A35C-4C22-BCD0-2B99B6F509C5}|https">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.ContactManagerApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{7C5B3756-A35C-4C22-BCD0-2B99B6F509C5}|https">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="ContactManagerApp/Pages/Index.cshtml">
     <Files>
       <File FileName="ContactManagerApp/Pages/Index.cshtml" Line="5" Column="43" />
@@ -21,8 +20,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ContactManagerApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

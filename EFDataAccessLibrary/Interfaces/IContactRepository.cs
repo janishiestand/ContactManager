@@ -18,6 +18,7 @@ namespace EFDataAccessLibrary.Interfaces
 		Task AddRangeAsync(IEnumerable<Contact> contacts, CancellationToken cancellationToken);
 		Task<Contact?> FindAsync(int id, CancellationToken cancellationToken);
 		Task<int> CountAsync(CancellationToken cancellationToken);
+
     }
 }
 

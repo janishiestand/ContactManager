@@ -15,7 +15,6 @@ namespace ContactManagerApp.Pages;
 public class IndexModel : PageModel
 {
     private readonly IContactRepository _db;
-    CancellationTokenSource cts = new CancellationTokenSource();
 
     public IList<Contact> Contacts = new List<Contact>();
 
@@ -47,26 +46,15 @@ public class IndexModel : PageModel
     {
         try
         {
-            await LoadSampleData(cancellationToken);
-            var contacts = _db.GetAllContacts();
+            // Contacts = await _db.ToListAsync(cancellationToken);
+ 
+            Contacts = await _db.GetAllContactsAsync(cancellationToken);
         }
-        catch (Exception)
+        catch (Exception e)
         {
+            Console.WriteLine(e.Message);
             RedirectToPage("/");
         }
-    }
-    
-    private async Task LoadSampleData(CancellationToken cancellationToken)
-    {
-        if (await _db.CountAsync(cancellationToken) == 0)
-        {
-            string file = System.IO.File.ReadAllText("sampledata.json");
-            var contacts = JsonSerializer.Deserialize<List<Contact>>(file);
-            await _db.AddRangeAsync(contacts, cancellationToken);
-            await _db.SaveChangesAsync(cancellationToken);
-            return;
-        }
-            Contacts = await _db.ToListAsync(cancellationToken);
     }
 
     public async Task<IActionResult> OnPost(CancellationToken cancellationToken)
@@ -86,15 +74,15 @@ public class IndexModel : PageModel
         return Page();
     }
 
-    public IActionResult OnPostDelete(int id, CancellationToken cancellationToken)
+    public async Task<IActionResult> OnPostDelete(int id, CancellationToken cancellationToken)
     {
-        Contact? toRemove = _db.Find(id);
+        Contact? toRemove = await _db.FindAsync(id, cancellationToken);
         if (toRemove == null)
         {
             return (NotFound());
         }
         _db.Remove(toRemove);
-        _db.SaveChangesAsync(cancellationToken);
+        await _db.SaveChangesAsync(cancellationToken);
         return RedirectToAction(nameof(IndexModel));
     }
 }

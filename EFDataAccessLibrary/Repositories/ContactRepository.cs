@@ -27,6 +27,7 @@ namespace EFDataAccessLibrary.Repositories
 			await _db.AddRangeAsync(contacts, cancellationToken);
         }
 
+
         public List<Contact> GetAllContacts()
 		{
 			return _db.Contacts.Include(a => a.Addresses)

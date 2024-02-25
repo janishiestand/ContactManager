@@ -1,5 +1,5 @@
 # Contact Manager
-## Introduction
+### Introduction
 The Contact Manager is a web application designed to facilitate the addition, update, and removal of contacts from a MySQL database.
 
 ### Motivation

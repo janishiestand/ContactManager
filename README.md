@@ -1,24 +1,26 @@
 # Contact Manager
 ### Introduction
-The Contact Manager is a web application designed to facilitate the addition, update, and removal of contacts from a MySQL database.
+Contact Manager is a web application aimed at simplifying the management of contacts by facilitating addition, update, and removal functionalities within a MySQL database.
 
 ### Motivation
-This web app has been created to learn more about Entity Framework Core 7.0 and how to implement various features necessary for a contact manager.
-There are a number of changes from EF Core 6.0 to 7.0 and creating this app has helped a lot to understand them.
+This web application was developed to delve deeper into the intricacies of Entity Framework Core 7.0, exploring the changes from previous versions, and implementing essential features required for an efficient contact manager.
 
 ### Purpose
-A C# Contact Manager app is a well-rounded challenge that covers web-related topics including CSHTML, communication with the backend through
-the repository pattern, and connectivity to a mySQL database. 
-The implementation of CRUD features can vary significantly, and this project provided an opportunity to explore various approaches.
+A Contact Manager app presents a comprehensive challenge, covering various web-related topics such as CSHTML, backend communication through the repository pattern, and integration with a MySQL database. The implementation of CRUD features offers flexibility and opportunity for exploration of different approaches.
 
 ### Functionality
-The application currently provides basic functionality to store, update, and delete contacts from the MySQL database. 
-However, a feature to list addresses and emails is yet to be implemented.
+The current functionality of the application includes basic operations like storing, updating, and deleting contacts from the MySQL database. However, a feature to list addresses and emails is yet to be implemented, providing avenues for future development.
+
+### 1. Dashboard
+The dashboard provides an overview of all stored contacts and facilitates updating and deleting.
+<img width="1141" alt="Screenshot 2024-02-27 at 14 05 18" src="https://github.com/janishiestand/ContactManager/assets/100535567/b5006722-c9b4-486a-9432-aab3c4be51de">
+
+### 2. Updating
+The application allows users to update existing contacts.
+<img width="257" alt="Screenshot 2024-02-27 at 14 05 32" src="https://github.com/janishiestand/ContactManager/assets/100535567/a8d0d94a-67ee-4179-88c9-daddc7d1c343">
 
 ### Learning Outcomes
-I've learned how to successfully implement the repository pattern an EF Core 7.0 app and how to make it communicate with a mySQL Database.
+The development of this application has led to a deeper understanding of implementing the repository pattern in EF Core 7.0 applications and establishing communication with a MySQL Database, thereby enhancing proficiency in these areas.
 
 ### Usage
-To use the Contact Manager app, ensure that you have created a local MySQL database named 'ContactManagerDB'. 
-Inside this database, create a table named 'Contacts' with the following columns: int 'id' (Auto Increment), 'FirstName', 'LastName', 'PhoneNumber', and 'Birthday' (all of type varchar apart from 'id'). 
-Once this is done, the app can be accessed and used to manage your contacts.
+To utilize the Contact Manager app, ensure the existence of a local MySQL database named 'ContactManagerDB'. Within this database, create a table named 'Contacts' with the following columns: 'id' (Auto Increment), 'FirstName', 'LastName', 'PhoneNumber', and 'Birthday' (all of type varchar except 'id'). Once configured, the application can be accessed and utilized for efficient contact management.

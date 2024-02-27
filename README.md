@@ -17,6 +17,7 @@ The dashboard provides an overview of all stored contacts and facilitates updati
 
 ### 2. Updating
 The application allows users to update existing contacts.
+
 <img width="257" alt="Screenshot 2024-02-27 at 14 05 32" src="https://github.com/janishiestand/ContactManager/assets/100535567/a8d0d94a-67ee-4179-88c9-daddc7d1c343">
 
 ### Learning Outcomes
